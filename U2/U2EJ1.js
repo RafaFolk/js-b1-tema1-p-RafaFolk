@@ -31,6 +31,17 @@ for(let i=0; i<10;i++){
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+function fibonacci(i){
+	if (i==0){       //caso bases que rompe recursividad: 0 & 1
+		return 0;
+	}
+	else if (i==1){ 
+		return 1;
+	}
+	else{            //caso recursivo
+		return (fibonacci(i-1) + fibonacci(i-2) );	
+	}
+}
 
 
 
