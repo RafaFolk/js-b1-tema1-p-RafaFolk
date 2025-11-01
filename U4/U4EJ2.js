@@ -32,6 +32,17 @@ console.log(evenNumbers(4,7,21,3)); //This will return [4,6,20,2]
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+function evenNumbers(...numbers){     //numero de parametros indeterminado, interesante concepto que no conociamos
+
+  const resultArray= [...numbers];   //clonamos usando ... otro concepto que no conociamos
+
+  for (let i=0; i<resultArray.length;i++){
+    resultArray[i]=numbers[i]-resultArray[i]%2;  //nos saltamos un paso haciendo la operación en paralelo
+  }
+
+  return resultArray;
+
+}
 
 
 

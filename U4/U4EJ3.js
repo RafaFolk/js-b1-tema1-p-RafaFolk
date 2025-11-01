@@ -55,6 +55,26 @@ console.log(oldest(classroomStudents[2], classroomStudents[3], classroomStudents
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+function oldest(...students){
+
+  const ageArray=[...students];   //clonamos en un array que tendrá las edades
+  
+    for (let i=0; i<ageArray.length;i++){
+      ageArray[i]=2025-ageArray[i].yearOfBirth;  //calculamos y guardamos las edades
+    }
+
+    let iMax=0;                                 //variable que tendra la posicion en el array del alumno mayor  
+    let oldestSt=ageArray[0];                   //variable para controlar la edad mayor
+    
+    for (let i=1; i<ageArray.length;i++){       //empezamos en 1 ya que hemos guardado el primero en la declaracion anterior
+      if (ageArray[i]>oldestSt){
+        oldestSt=ageArray[i];                   //actualizamos edad e i si necesario
+        iMax=i;
+      }  
+    }
+
+  return students[iMax].name;                  //accedemos al nombre a traves del estudiante y este de su posicion   
+}
 
 
 
