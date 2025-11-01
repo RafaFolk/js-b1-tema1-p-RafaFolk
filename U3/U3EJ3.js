@@ -61,7 +61,22 @@ console.log(totalApproved(classroomStudents));
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+function totalApproved(studentsArray){
 
+  //función que determina si el alumno ha aprobado según enunciado
+  function isApproved(student){
+    return student.averageGrade>=5;
+  }
+
+  let result=0;  // variable resultado que tendrá el número de aprobados
+  for(let i=0;i<studentsArray.length;i++){    //iteración del array de estudiantes
+    if(isApproved(studentsArray[i])){
+      result++;                               //sumando uno si el alumno ha aprobado
+    };     
+  }
+
+  return result;
+}
 
 
 /**

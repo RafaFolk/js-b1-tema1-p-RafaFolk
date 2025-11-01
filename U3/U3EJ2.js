@@ -61,7 +61,20 @@ console.log(currentAge(classroomStudents));
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+function currentAge(studentsArray){
 
+  //función que calcula años según enunciado
+  function calculatedYears(student){
+    return 2023-student.yearOfBirth;
+  }
+
+  let resultArray=[];  //array resultado
+  for(let i=0;i<studentsArray.length;i++){                   //iteración del array de estudiantes
+    resultArray.push(calculatedYears(studentsArray[i]));     //añadiendo fecha (usando función interna) al array resultado
+  }
+
+  return resultArray;
+}
 
 
 /**

@@ -3,7 +3,8 @@
 /** 
 	-- CASTELLANO --
 	EJERCICIO 1.3.1 ENUNCIADO:
-	Crea una función (llamada hypotenuse) que reciba como parámetros la base y la altura de un triángulo rectángulo y devuelva la medida de su hipotenusa.
+	Crea una función (llamada hypotenuse) que reciba como parámetros la base y la altura de un triángulo rectángulo y devuelva 
+  la medida de su hipotenusa.
   Recuerda que la fórmula del cálculo de la hipotenusa triángulo rectángulo, dadas la base y la altura es c = √(b²+a²). 
   Es decir: la raíz cuadrada de la base al cuadrado más la altura al cuadrado.
   Para calcular estas operaciones de elevar al cuadrado, debes definir (y emplear) dentro de la función principal (hypotenuse)
@@ -23,7 +24,18 @@
 console.log(hypotenuse(3,4));
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
+function hypotenuse(base, altura){
 
+  //funcion que devuelve el cuadrado de un numero dado
+  function square(num){
+    return num**2; //
+  }
+
+  //nota: elevar a 1/2 es hacer la raiz cuadrada
+  //alternativamente podríamos haber usado el método pow del objeto Math
+  return (base**2+altura**2)**0.5;
+
+}
 
 
 
