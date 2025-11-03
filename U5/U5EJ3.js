@@ -68,7 +68,10 @@ let planets = [
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
 
-
+const planetHasRings=planet =>planet.hasRings;
+const result = planets.filter(planetHasRings);
+//compacto y elegante :)
+//TODOS los test del tema 1 pasados
 
 /**
  * TEST
